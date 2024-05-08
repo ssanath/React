@@ -5,7 +5,7 @@ import Footer from './Components/Footer';
 function App() {
   const initialProducts = [
     {
-      name: "IPhone",
+      name: "IPhone 14",
       price: 99999,
       quantity: 0,
     },
