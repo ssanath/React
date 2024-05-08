@@ -1,0 +1,22 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+jobs:
+- job: BuildAndTest
+  displayName: 'Build and Test'
+  steps:
+  - script: echo Building...
+    displayName: 'Build Step'
+
+  - script: echo Running tests...
+    displayName: 'Test Step'
+
+- job: Deploy
+  displayName: 'Deploy'
+  dependsOn: BuildAndTest
+  steps:
+  - script: echo Deploying...
+    displayName: 'Deployment Step'
